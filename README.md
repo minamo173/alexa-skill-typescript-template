@@ -1,16 +1,16 @@
 Amazon AlexaのカスタムスキルをTypeScriptを使って開発するテンプレートです。
 
-AWS Lambdaへのデプロイや、Alexaのスキルで扱うその他のAWSリソースの管理は、[AWS SAM (Serverless Application Model)](https://github.com/awslabs/serverless-application-model)を利用しています。
+AWS Lambdaへのデプロイや、Alexaのスキルで扱うその他のAWSリソースの管理は、[AWS SAM (Serverless Application Model)](https://github.com/awslabs/serverless-application-model)を利用しています。
 
 ## 必要なもの
 ### AWS SAM CLI
 
-+ [AWS SAM CLIのインストール](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/sam-cli-requirements.html)
++ [AWS SAM CLIのインストール](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/sam-cli-requirements.html)
 
 ### デプロイ先のAWSアカウントの認証情報の設定
 
 + [設定ファイルと認証情報ファイル](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-config-files.html)
-
+
 ## デプロイ
 下記のコマンドでデプロイできます。
 
@@ -25,6 +25,6 @@ AWS Lambdaへのデプロイや、Alexaのスキルで扱うその他のAWSリ�
 
 ## 注意点
 ### `skill/src/` フォルダ内でのパッケージ管理について
-型情報を参照するパッケージ（「`@types/`」から始まるパッケージなど）や、TypeScriptからJavaScriptにビルドした後のファイルで使用しないパッケージは、 `$ yarn add -D {packageName}` で `devDependencies` としてインストールすることをおすすめします。
+型情報を参照するパッケージ（「`@types/`」から始まるパッケージなど）や、TypeScriptからJavaScriptにビルドした後のファイルで使用しないパッケージは、 `$ yarn add -D {packageName}` で `devDependencies` としてインストールすることをおすすめします。
 
 （こうすることで、デプロイ時のLambda関数のファイルサイズを軽量に保つことができます。）
